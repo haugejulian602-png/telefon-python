@@ -1,9 +1,12 @@
 
-# Oppgave 3
-def legg_til():
-    navn = input("Skriv inn et navn: ").strip()
-    nummer = input("Skriv inn et nummer: ").strip()
-    ny_person = {"navn": navn, "nummer": nummer}
-    telefonbok.append(ny_person)
-    print(f"{navn} ble lagt til i telefonboka.\n")
+
+# Oppgave 4
+def sok():
+    navn = input("Hvem vil du søke etter? ").strip()
+    for person in telefonbok:
+        if person["navn"].lower() == navn.lower():
+            print(f"Fant: {person['navn']} - {person['nummer']}\n")
+            return
+    print("Person ikke funnet.\n")
+
 
