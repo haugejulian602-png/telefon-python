@@ -1,12 +1,9 @@
 
-
-# Oppgave 2
-def vis_alle():
-    if not telefonbok:
-        print("Telefonboka er tom.")
-    else:
-        print("\n--- Telefonbok ---")
-        for person in telefonbok:
-            print(f"{person['navn']}: {person['nummer']}")
-        print("------------------\n")
+# Oppgave 3
+def legg_til():
+    navn = input("Skriv inn et navn: ").strip()
+    nummer = input("Skriv inn et nummer: ").strip()
+    ny_person = {"navn": navn, "nummer": nummer}
+    telefonbok.append(ny_person)
+    print(f"{navn} ble lagt til i telefonboka.\n")
 
